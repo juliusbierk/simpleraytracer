@@ -226,7 +226,7 @@ class Sphere:
 		c = self.center
 		pre = l.dot(o - c)
 		discriminant = pre**2 - l.dot(l) * ( (o-c).dot(o-c) - self.radius**2 )
-		if discriminant <= 0: # fuck the edge
+		if discriminant <= 0:
 			return Intersection()
 		else:
 			discriminant = np.sqrt(discriminant)
